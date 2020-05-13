@@ -1,0 +1,131 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Lucky Seven
+description: > # this means to ignore newlines until "baseurl:"
+  Blog for personal stuff and work.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://luxleather.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+github_source: luxleather.github.io
+
+# Site Author
+author:
+  name             : "Lucky Seven"
+  avatar           : "/assets/images/gitavatar.jpg"
+  bio              : "Blockchain and python enthusiast"
+  location         : "Earth, Milky Way"
+  email            :
+  uri              :
+  home             : # null (default), "absolute or relative url to link to author home"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/luxleather"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/cryptomicke"
+    - label: "Stack Overflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: ""
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: ""
+    - label: "BitBucket"
+      icon: "fab fa-fw fa-bitbucket"
+      url: ""
+    - label: "GitLab"
+      icon: "fab fa-fw fa-gitlab"
+      url: ""
+
+
+
+# permalink: /:categories/:title/
+permalink: /:year/:month/:day/:title.html
+
+# Pagination settings
+paginate: 5                           # number of posts to show per page
+# paginate_path: "/page:num/"  # link scheme for articles, should be letf as is
+
+category_archive:
+  type: liquid
+  path: /categories/
+
+# Used by Jekyll to recognize what is a post and what is a page
+defaults:
+  -
+    scope:
+      path: ''
+      type: pages
+    values:
+      layout: single
+      author_profile: true 
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      related: true
+
+# Markdown parser settings
+markdown: kramdown
+highlighter: rouge
+
+timezone: GMT+1
+
+# Build settings
+include:
+  - _pages                  # all your pages can be put inside pages (except articles)
+exclude:
+  - _drafts
+  - README.md
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
+github: [metadata]
+remote_theme: "mmistakes/minimal-mistakes@4.15.2"
+
+minimal_mistakes_skin: "dark"
+
+plugins:
+  - jekyll-archives
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-include-cache
+  - jemoji
+
+category_archive:
+  type: jekyll-archives
+  path: /categories/
+tag_archive:
+  type: jekyll-archives
+  path: /tags/
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
