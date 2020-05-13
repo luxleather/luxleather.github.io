@@ -13,6 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
+#logo: "/assets/images/88x88.png"
 title: Luxleather
 description: > # this means to ignore newlines until "baseurl:"
   Blog for personal stuff and work.
@@ -23,13 +25,13 @@ github_source: luxleather.github.io
 
 # Site Author
 author:
-  name             : "Lucky Seven"
+  name             : "Luxleather"
   avatar           : "/assets/images/gitavatar.png"
   bio              : "Blockchain & python enthusiast"
   location         : "Earth, Milky Way"
   email            :
   uri              :
-  home             : # null (default), "absolute or relative url to link to author home"
+  home             : # null (default)
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -87,7 +89,7 @@ defaults:
 markdown: kramdown
 highlighter: rouge
 
-timezone: GMT+1
+timezone: Europe/Paris
 
 # Build settings
 include:
