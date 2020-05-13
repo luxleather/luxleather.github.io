@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Lucky Seven
+title: Luxleather
 description: > # this means to ignore newlines until "baseurl:"
   Blog for personal stuff and work.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -24,8 +24,8 @@ github_source: luxleather.github.io
 # Site Author
 author:
   name             : "Lucky Seven"
-  avatar           : "/assets/images/gitavatar.jpg"
-  bio              : "Blockchain and python enthusiast"
+  avatar           : "/assets/images/gitavatar.png"
+  bio              : "Blockchain & python enthusiast"
   location         : "Earth, Milky Way"
   email            :
   uri              :
@@ -37,18 +37,18 @@ author:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/cryptomicke"
-    - label: "Stack Overflow"
-      icon: "fab fa-fw fa-stack-overflow"
-      url: ""
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: ""
-    - label: "BitBucket"
-      icon: "fab fa-fw fa-bitbucket"
-      url: ""
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      url: ""
+#    - label: "Stack Overflow"
+#      icon: "fab fa-fw fa-stack-overflow"
+#      url: ""
+#    - label: "LinkedIn"
+#      icon: "fab fa-fw fa-linkedin"
+#      url: ""
+#    - label: "BitBucket"
+#      icon: "fab fa-fw fa-bitbucket"
+#      url: ""
+#    - label: "GitLab"
+#      icon: "fab fa-fw fa-gitlab"
+#      url: ""
 
 
 
@@ -81,6 +81,7 @@ defaults:
       author_profile: true
       read_time: true
       related: true
+      share: true
 
 # Markdown parser settings
 markdown: kramdown
