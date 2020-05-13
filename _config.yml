@@ -89,7 +89,7 @@ defaults:
 markdown: kramdown
 highlighter: rouge
 
-timezone: Europe/Paris
+timezone: Europe/Belgrade
 
 # Build settings
 include:
