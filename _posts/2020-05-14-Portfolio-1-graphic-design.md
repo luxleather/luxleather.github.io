@@ -1,11 +1,13 @@
 ---
 layout: single
 title:  "Portfolio 1 graphic design"
-date:   2020-05-14
-desc:   Some of my graphic design works
+layout: single
+categories: design
 ---
-## Logos:
+### Some of my graphic design works
 
+## Logos:
+<img src="{{site.baseurl}}/imag/logo1.png"> <img src="{{site.baseurl}}/imag/logo2.png">
 ## Book covers:
 
 ## CD Covers:
