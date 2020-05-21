@@ -81,9 +81,9 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       related: true
-      share: true
+      share: false
 
 # Markdown parser settings
 markdown: kramdown
