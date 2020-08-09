@@ -67,11 +67,17 @@ _We will get back here to Control wallet later after setup VPS._
 
 To be able to access a VPS, you need a software/SSH client like PuTTY for example. After you successfully login to your VPS, follow the further steps.
 
-**Step 1** – Install most recent security patches
+**Step 1** – Install most recent security patches and firewall
 
 A clean server install will need some software updates. Enter the following command which will bring the system up to date:
 
 `sudo apt-get update && sudo apt-get -y upgrade`
+
+One of the important steps is to check firewall and setup Masternode port:
+
+`ufw status` - check firewall status
+`sudo ufw allow <mn port>/tcp` - setting up Masternode port
+`sudo ufw enable` - enable firewall
 
 **Step 2** – Download and extract Core wallet for Linux
 
@@ -80,6 +86,14 @@ Enter the following command lines one by one to download and extract wallet _(fr
 `cd ~ && wget <github url to linux wallet>.tar.gz`
 
 `tar -zxvf <github url to linux wallet>.tar.gz && sudo rm -f <github url to linux wallet>.tar.gz`
+
+for zipped file:
+
+`apt install unzip`
+
+`cd ~ && wget <github url to linux wallet>.zip`
+
+`unzip <github url to linux wallet>.zip && sudo rm -f <github url to linux wallet>.zip`
 
 ### Masternode Configuration
 
@@ -130,7 +144,9 @@ After it’s successfully extracted, it is recommended to remove the .zip file t
 
 With the configuration created we are now ready to load the masternode and sync to the network. Load the masternode by typing the following command:
 
-`cd ~/<coin name>/bin && ./<coin name>d` _(here we starting the daemon)_
+`cd ~/<coin name>/bin`
+
+`./<coin name>d -daemon` _(here we starting the daemon)_
 
 You will get the message “<Coin name> server starting”. To follow the progress until the wallet is fully loaded and synchronized, type:
 
