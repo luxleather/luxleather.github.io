@@ -14,7 +14,7 @@ Contents
 - Masternode configuration
 - Masternode start
 
-### Introduction
+## Introduction
 
 This tutorial will guide you in detail through the steps necessary to setup a masternode on Ubuntu 18.04 64-bit remote server (VPS) that is controlled via your local PC wallet. Your local wallet is not required to be kept open all the time whilst collecting masternode payments.
 
@@ -26,9 +26,9 @@ _Requirements:_
 - Latest Core wallet release of the Masternode coin you want to install
 - Collateral - Amount of coins that should be locked in Control wallet to run Masternode
 
-(NOTE: You will need a different IP address for each masternode you plan to host.)
+_(NOTE: You will need a different IP address for each masternode you plan to host.)_
 
-### Installation of your PC/Control wallet
+## Installation of your PC/Control wallet
 
 **Step 1** – Download wallet
 
@@ -40,7 +40,7 @@ Choose the proper version for your operating system. Extract it, install and run
 
 **Step 3** – Download the latest snapshot/bootstrap _(optional)_
 
-This is entirely optional step. It is always recommended not to trust, but to verify the blockchain yourself. However, since this would take longer than downloading the latest blockchain snapshot, there is a way to speed up the synchronization by downloading the latest snapshot.
+This is entirely optional step. It is always recommended not to trust, but to verify the blockchain yourself. However, since this would take longer than downloading the latest blockchain snapshot, there is a way to speed up the synchronization by downloading the latest snapshot usually from official github of the coin project.
 
 **Step 4** – Create a Masternode on Control wallet
 
@@ -63,7 +63,7 @@ First of all, make sure that you have enough coins in your wallet for Masternode
 
 _We will get back here to Control wallet later after setup VPS._
 
-### VPS Remote wallet installation
+## VPS Remote wallet installation
 
 To be able to access a VPS, you need a software/SSH client like PuTTY for example. After you successfully login to your VPS, follow the further steps.
 
@@ -137,8 +137,8 @@ You will get the message “<Coin name> server starting”. To follow the progre
 `tail -f ~/.<coin name>/debug.log`
 
 Wait until you see the message similar to:
-2025-05-15 13:31:01 CMasternodeSync::GetNextAsset – Sync has finished
-2025-05-15 13:31:01 CActiveMasternode::ManageStatus() – not capable: Hot node, waiting for remote activation.
+`2025-05-15 13:31:01 CMasternodeSync::GetNextAsset – Sync has finished`
+`2025-05-15 13:31:01 CActiveMasternode::ManageStatus() – not capable: Hot node, waiting for remote activation.`
 
 Once you get this message, you are completely synced and masternode is ready to be started. Press `CTRL-C` to get back to command line.
 
@@ -152,11 +152,18 @@ You will get back information where in line "block" you can see recent block cou
 
 **Step 6** - Start Masternode from Control wallet _(final step)_
 
-Now when we have fully synced Masternode on our VPS it is tim to start it from Control wallet. To do this go to wallet console and type:
+Now when we have fully synced Masternode on our VPS it is time to start it from Control wallet. To do this go to wallet console and type:
 
 `startmasternode alias false <your MN alias>`
+
+**Step 7** - Final check
 
 If everything went well, you should receive the following message:
 
 “Masternode successfully started”
 
+Also we check on our VPS with command:
+
+`./<coin name>-cli getmasternodestatus`
+
+“Masternode successfully started”
