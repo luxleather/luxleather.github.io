@@ -1,0 +1,31 @@
+---
+layout: single
+title:  "Masternode installation tutorial"
+layout: single
+categories: design
+---
+### Masternode Setup Guide
+
+Contents
+
+- Introduction
+- Installation of your PC/Control wallet
+- VPS Remote wallet installation
+- Masternode configuration
+- Masternode start
+
+### Introduction
+
+This tutorial will guide you in detail through the steps necessary to setup a masternode on Ubuntu 18.04 64-bit remote server (VPS) that is controlled via your local PC wallet. Your local wallet is not required to be kept open all the time whilst collecting masternode payments.
+
+_Requirements:_
+
+- Local system – your computer, which will run Control wallet and hold the masternode coins
+- VPS with Ubuntu Server 18.04 64-bit OS and unique IP address that is running 24/7
+- Minimum VPS specs: 50 GB of storage space, 4 GB of RAM, at least 1 dedicated CPU core
+- Latest Core wallet release of the Masternode coin you want to install
+- Collateral - Amount of coins that should be locked in Control wallet to run Masternode
+
+(NOTE: You will need a different IP address for each masternode you plan to host.)
+
+### Installation of your PC/Control wallet
