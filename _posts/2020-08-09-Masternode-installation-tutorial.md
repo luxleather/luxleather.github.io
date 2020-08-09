@@ -76,7 +76,9 @@ A clean server install will need some software updates. Enter the following comm
 One of the important steps is to check firewall and setup Masternode port:
 
 `ufw status` - check firewall status
+
 `sudo ufw allow <mn port>/tcp` - setting up Masternode port
+
 `sudo ufw enable` - enable firewall
 
 **Step 2** – Download and extract Core wallet for Linux
@@ -143,8 +145,6 @@ After it’s successfully extracted, it is recommended to remove the .zip file t
 **Step 5** – Load the masternode
 
 With the configuration created we are now ready to load the masternode and sync to the network. Load the masternode by typing the following command:
-
-`cd ~/<coin name>/bin`
 
 `./<coin name>d -daemon` _(here we starting the daemon)_
 
