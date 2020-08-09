@@ -153,7 +153,9 @@ You will get the message “<Coin name> server starting”. To follow the progre
 `tail -f ~/.<coin name>/debug.log`
 
 Wait until you see the message similar to:
+
 `2025-05-15 13:31:01 CMasternodeSync::GetNextAsset – Sync has finished`
+
 `2025-05-15 13:31:01 CActiveMasternode::ManageStatus() – not capable: Hot node, waiting for remote activation.`
 
 Once you get this message, you are completely synced and masternode is ready to be started. Press `CTRL-C` to get back to command line.
